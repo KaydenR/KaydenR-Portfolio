@@ -1,0 +1,225 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    font-family: "Rafigen";
+}
+
+body {
+    display: block;
+    width: 100%;
+    height: 500vh;
+    margin: 0%;
+    background: linear-gradient(180deg, rgba(0,0,0,0.18393294817927175) 18%, rgba(0,0,0,1) 51%, rgba(100,151,255,1) 70%, rgba(255,255,255,1) 77%), url(../img/Solar.jpg);
+}
+
+@font-face{
+    font-family: "Rafigen";
+    src: url(../img/Rafigen.ttf);
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.container{
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.nav {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(255,255,255,.05);
+    transition: height .5s ease;
+
+}
+
+
+/* Socials bar */
+.socials-container {
+    display: grid;
+    width: 5%;
+    height: 30%;
+    position: fixed;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    right: 0;
+    top: 25%;
+    z-index: 1000;
+}
+
+.icon1 {
+    grid-row-start: 1;
+}
+
+.icon2 {
+    grid-row-start: 2;
+}
+
+.icon3 {
+    grid-row-start: 3;
+}
+
+.linkedin, 
+.github, 
+.gmail {
+    display: block;
+    width: 60px;
+    margin: auto;
+    opacity: 0.5;
+}
+
+/* Intro section styling and animations*/
+.space-section {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 0.3fr 1fr 0.2fr;
+    grid-template-columns: 2fr 1fr;
+}
+
+.space-section h1 {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: lighter;
+
+    animation: fade-in 2s;
+}
+
+.space-section h2 {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: lighter;
+    margin-top: 20%;
+
+    animation: fade-in 2s;
+}
+
+.space-section h3 {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: lighter;
+    margin-top: 25%;
+
+    animation: fade-in 2s;
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+        transform: translateY(1em);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0em);
+    }
+    
+}
+
+.astronaut{
+    width: 350px;
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+
+.arrow-link {
+    position: absolute;
+    top: 85%;
+    left: 46.5%;
+    z-index: 1;
+}
+
+.down-arrow {
+    display: block;
+    width: 100px;
+    grid-row-start: 3;
+    opacity: 0.75;
+
+    animation: bounce 3s infinite;
+}
+
+.down-arrow:hover {
+    transform: scale(1.2);
+    animation: none;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0.5em);
+    }
+    50%{
+        transform: translateY(0em);
+    }
+    100%{
+        transform: translateY(0.5em);
+    }
+}
+
+/* About me section styling and animations*/
+.about-section {
+    width: 100%;
+    height: 100vh;
+}
+
+.about-section h1 {
+    display: block;
+    position: relative;
+    top: 20%;
+    left: 5%;
+    font-size: 300px;
+    font-weight: lighter;
+    color: white;
+    opacity: 0.2;
+    z-index: -1;
+
+}
+
+.about-section h2 {
+    display: block;
+    position: relative;
+    width: 75%;
+    top: 0;
+    left: 10%;
+    font-size: 50px;
+    font-weight: lighter;
+    color: white;
+    letter-spacing: 2px;
+    z-index: 1;
+
+}
+
+.text-animation {
+    animation: slide-out 2s ease;
+}
+
+@keyframes slide-out {
+    0%{
+        transform: translateX(-30em);
+    }
+    100%{
+        transform: translateX(0em)
+    }
+}
